@@ -94,12 +94,12 @@
             label = "Nav";
             bindings = <
 &bt BT_CLR &kp N1     &kp N2     &kp N3      &kp N4          &kp N5       &kp N6     &kp N7         &kp N8      &kp N9     &kp N0     &kp BKSP
-&mt LCTRL  &trans     &kp LC(X)  &kp LC(C)   &kp LC(V)       &kp LC(S)    &kp LEFT   &kp DOWN       &kp UP      &kp RIGHT  &kp SEMI   &kp LS(SEMI)
-&trans     &bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)       &bt BT(4)    &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
+&kp LCTRL  &trans     &kp LC(X)  &kp LC(C)   &kp LC(V)       &kp LC(S)    &kp LEFT   &kp DOWN       &kp UP      &kp RIGHT  &kp SEMI   &kp LS(SEMI)
+&kp LSHFT  &trans     &trans     &kp LC(Z)   &kp LC(Y)       &trans       &HOME      &kp PG_DN      &kp PG_UP   &trans  &trans    &kp END
 #ifdef TBLE_DUAL_2U
 &trans  &trans        &trans     &trans              &trans                    &trans       &trans         &trans &trans &trans
 #elif defined(TBLE_MIT)
-&trans  &trans        &trans     &trans      &trans                &trans             &trans      &trans   &trans &trans &trans
+&kp LALT  &trans   &kp TAB  &kp LGUI    &mo NAV_L          &kp SPACE                   &mo NUM_L      &bt BT(1)  &bt BT(2)   &bt BT(3)       &bt BT(4)
 #else
 &trans  &trans        &trans     &trans      &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
 #endif
