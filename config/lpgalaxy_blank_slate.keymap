@@ -65,6 +65,16 @@
     };
 #endif
 
+#ifdef TBLE_MIT
+    cond_layers {
+        compatible = "zmk,conditional-layers";
+	tri {
+	    if-layers = <NUM_L NAV_L>;
+	    then-layer = <SYM_L>;
+        };
+    };
+#endif
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -110,8 +120,8 @@
             label = "Num";
             bindings = <
 &kp GRAVE  &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4)  &kp LS(N5) &kp LS(N6)  &kp LS(N7)      &kp LS(N8)    &kp LS(N9)   &kp LS(N0)   &kp BKSP
-&kp LCTRL  &trans    &trans    &kp LS(N9) &kp LS(N0)  &trans    &kp KP_MINUS     &kp KP_PLUS     &kp LS(LBKT)  &kp LS(RBKT) &kp BSLH     &kp GRAVE
-&kp LSHFT  &trans    &trans    &trans    &trans     &trans    &kp LS(KP_MINUS) &kp LS(KP_PLUS) &kp LBKT      &kp RBKT     &kp LS(BSLH) &kp LS(GRAVE)
+&kp LCTRL  &trans    &trans    &kp LS(N9) &kp LS(N0)  &trans    &kp MINUS     &kp EQUAL     &kp LS(LBKT)  &kp LS(RBKT) &kp BSLH     &kp GRAVE
+&kp LSHFT  &trans    &trans    &trans    &trans     &trans    &kp LS(MINUS) &kp LS(EQUAL) &kp LBKT      &kp RBKT     &kp LS(BSLH) &kp LS(GRAVE)
 #ifdef TBLE_DUAL_2U
 &trans  &trans       &trans     &kp N0              &trans                 &trans            &trans         &trans &trans &trans
 #elif defined(TBLE_MIT)
